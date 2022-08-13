@@ -1,0 +1,32 @@
+
+
+<div class="container" style="margin: 13px;" *ngFor="let from of articles">
+
+<div >
+    <div class="row">
+        <div class="col-md-4 col-10" style="background:rgb(248, 248, 248) ;">
+            <div class="border_box" >
+                <hr class="border_hr">
+                <h4 class="padding_title">{{from.name}} </h4>
+                <p class="text_desc">{{from.description}}</p>
+            </div>
+        </div>
+        <div class="col-2"></div>
+        <div class="col-md-6 col-6 "><img class="img_cat" src="https://cdn2.thecatapi.com/images/{{from.reference_image_id}}.jpg" alt="{{from.name}}" /></div>
+      </div>
+    
+       
+        
+
+</div>
+<div class="col-10 box_list">
+    <img class="position_icon" src="/assets/images/logo_list.png"  />
+   
+    
+    <ul class="p_list">
+        <li>{{from.temperament}}</li>
+      </ul>
+</div>
+</div>
+
+

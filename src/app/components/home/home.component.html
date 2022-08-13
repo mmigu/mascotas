@@ -1,0 +1,53 @@
+<style>
+    .my-pagination ::ng-deep .ngx-pagination .current {
+      background: red !important;
+    }
+    .my-pagination ::ng-deep .pagination-next {
+        background: red;
+        color: white;
+        border: 1px solid #eee;
+        border-radius: 4px;
+    }
+    .my-pagination ::ng-deep .current {
+        border: 1px solid #eee;
+        border-radius: 4px;
+    }
+    .my-pagination ::ng-deep .pagination-previous {
+        background: red;
+        color: white;
+        border: 1px solid #eee;
+        border-radius: 4px;
+    }
+</style>
+<div class="container" style="margin: 13px;">
+    <div class="row">
+        
+            <div class="col-md-4 padding_card" *ngFor="let article of articles | paginate: { itemsPerPage: 6, currentPage: page }">
+                <a class="a_link" [routerLink]="['/pagina/', article.id]">
+                <div class="card">
+                    <img src="{{article.image.url}}" class="card-img-top img_card" alt="{{article.name}}">
+                    <div class="card-body title_cat" >
+                        <div class="row">
+                            <div class="col-md-11 col-10"> 
+                                <h6>{{article.name}}</h6>
+                            </div>
+                            <div class="col-md-1 col-1">
+                                <p class="enter_card">></p>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+            </a>
+            </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4"> 
+           
+            <pagination-controls class="my-pagination" (pageChange)="page = $event" previousLabel="" nextLabel=""></pagination-controls>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+   
+</div>

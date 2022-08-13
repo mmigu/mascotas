@@ -1,0 +1,33 @@
+.img_card{
+    width: auto;
+    height: 320px;
+  
+}
+.padding_card{
+    padding: 10px;
+}
+.row{
+    width: 100%;
+}
+.pagination-previous{
+    color: red;
+    font-size: 20px;
+}
+.a_link {
+    text-decoration: none !important;
+    color: black !important;
+}
+.title_cat{
+     height: 55px;
+}
+.enter_card{
+    font-size: 35px;
+    color: red;
+    margin-top: -17px;
+}
+.ngx-pagination .current {
+    padding: 0.1875rem 0.625rem;
+    background: red !important;
+    color: #fefefe;
+    cursor: default;
+}
